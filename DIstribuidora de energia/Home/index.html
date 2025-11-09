@@ -11,25 +11,20 @@
             font-family: 'Inter', sans-serif;
         }
     </style>
+   
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-center items-center h-16">
                 <div class="flex-shrink-0">
-                    <a href="indexhome.html" class="text-2xl font-bold text-blue-600">
-                        GestãoEnergia
+                    <a href="#" class="text-2xl font-bold text-blue-600">
+                        Gestão Energia
                     </a>
                 </div>
                 
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="indexhome.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                    <a href="login.html" class="text-blue-600 font-semibold px-3 py-2 rounded-md text-sm hover:bg-gray-100 transition-colors">Login</a>
-                    <a href="cadastro.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Cadastro de Residência</a>
-                    <a href="visualizar.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Visualizar Dados</a>
-                    <a href="gerenciar.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Editar / Apagar Cadastros</a>
-                </div>
+                
 
                 <div class="md:hidden flex items-center">
                     <button class="text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 p-2 rounded-md">
@@ -52,7 +47,7 @@
                 Faça login para gerenciar o sistema.
             </p>
 
-            <form action="#" method="POST">
+            <form action="indexhome.html" method="GET">
                 <div class="space-y-6">
                     
                     <div>
@@ -79,6 +74,7 @@
                         <input type="password" id="password" name="password" 
                                autocomplete="current-password"
                                required
+                               minlength="8"
                                placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
                                class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400
                                       focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
