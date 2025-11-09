@@ -174,9 +174,9 @@
         </div>
     </div>
 
-    <script>
+   <script>
     document.addEventListener('DOMContentLoaded', () => {
-        
+
         // 1. Pegar todos os elementos principais
         const editModal = document.getElementById('edit-modal');
         const deleteModal = document.getElementById('delete-modal');
@@ -188,75 +188,67 @@
         let rowToDelete = null; // Variável para guardar a linha a ser apagada
 
         // 2. Listener principal na TABELA (Event Delegation)
-        // Isso vai "ouvir" cliques nos botões 'Editar' ou 'Apagar'
         tableBody.addEventListener('click', (e) => {
             const target = e.target; // O elemento exato que foi clicado
 
             // 3. Verifica se o clique foi em um botão 'Editar'
             if (target.classList.contains('btn-edit')) {
                 const row = target.closest('tr');
-                
-                // Pega os dados da linha clicada
+
                 const id = row.dataset.id;
                 const bairro = row.querySelector('.data-bairro').textContent;
                 const hora = row.querySelector('.data-hora').textContent;
                 const consumo = row.querySelector('.data-consumo').textContent;
                 const residencias = row.querySelector('.data-residencias').textContent;
 
-                // Preenche o formulário do modal de edição
                 document.getElementById('edit-id').value = id;
                 document.getElementById('edit-bairro').value = bairro;
                 document.getElementById('edit-hora').value = hora;
                 document.getElementById('edit-consumo').value = consumo;
                 document.getElementById('edit-residencias').value = residencias;
 
-                // Mostra o modal de edição
                 editModal.style.display = 'flex';
             }
 
             // 4. Verifica se o clique foi em um botão 'Apagar'
             if (target.classList.contains('btn-delete')) {
-                rowToDelete = target.closest('tr'); // Guarda a linha que queremos apagar
-                deleteModal.style.display = 'flex'; // Mostra o modal de confirmação
+                rowToDelete = target.closest('tr'); 
+                deleteModal.style.display = 'flex';
             }
         });
 
         // 5. Listener para o formulário de EDIÇÃO
         editForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Impede que a página recarregue
+            e.preventDefault(); 
 
-            // Pega os valores atualizados do formulário
             const id = document.getElementById('edit-id').value;
             const bairro = document.getElementById('edit-bairro').value;
             const hora = document.getElementById('edit-hora').value;
             const consumo = document.getElementById('edit-consumo').value;
             const residencias = document.getElementById('edit-residencias').value;
 
-            // Encontra a linha original na tabela usando o ID
             const row = tableBody.querySelector(`tr[data-id='${id}']`);
-            
+
             if (row) {
-                // Atualiza o texto de cada célula na tabela
                 row.querySelector('.data-bairro').textContent = bairro;
                 row.querySelector('.data-hora').textContent = hora;
-                // Formata o consumo para 2 casas decimais
                 row.querySelector('.data-consumo').textContent = parseFloat(consumo).toFixed(2);
                 row.querySelector('.data-residencias').textContent = residencias;
             }
-            
-            editModal.style.display = 'none'; // Esconde o modal
+
+            editModal.style.display = 'none'; 
         });
 
         // 6. Listener para o botão de CONFIRMAR EXCLUSÃO
         confirmDeleteBtn.addEventListener('click', () => {
             if (rowToDelete) {
-                rowToDelete.remove(); // Remove a linha da tabela
-                rowToDelete = null;   // Limpa a variável
-                deleteModal.style.display = 'none'; // Esconde o modal
+                rowToDelete.remove(); 
+                rowToDelete = null;   
+                deleteModal.style.display = 'none'; 
             }
         });
 
-        // 7. Listener para TODOS os botões de fechar modal
+        // 7. Listener para TODOS os botões de fechar modal (X e Cancelar)
         closeButtons.forEach(button => {
             button.addEventListener('click', () => {
                 editModal.style.display = 'none';
@@ -264,7 +256,7 @@
             });
         });
 
-        // 8. Listener para fechar o modal clicando FORA dele (no fundo)
+        // 8. Listener para fechar o modal clicando FORA dele
         window.addEventListener('click', (e) => {
             if (e.target === editModal) {
                 editModal.style.display = 'none';
@@ -273,7 +265,7 @@
                 deleteModal.style.display = 'none';
             }
         });
-        
+
     });
 </script>
 </body>
