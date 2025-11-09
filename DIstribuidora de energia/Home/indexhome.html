@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Gestão de Consumo de Energia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">
+                        GestãoEnergia
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-blue-600 font-semibold px-3 py-2 rounded-md text-sm hover:bg-gray-100 transition-colors">Home</a>
+                    <a href="login.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Login</a>
+                    <a href="cadastro.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Cadastro de Residência</a>
+                    <a href="visualizar.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Visualizar Dados</a>
+                    <a href="gerenciar.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Editar / Apagar Cadastros</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 p-2 rounded-md">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12">
+        
+        <section class="text-center bg-white p-10 md:p-16 rounded-lg shadow-lg mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Bem-vindo ao Sistema de Gestão de Consumo Residencial
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Gerenciando o futuro da energia de forma eficiente, um bairro de cada vez.
+            </p>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-lg mb-12">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+
+                <div>
+                    <h2 class="text-3xl font-semibold text-gray-700 mb-5">
+                        Sobre o Nosso Sistema
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Nosso sistema de gestão de consumo residencial é uma ferramenta poderosa projetada para monitorar, analisar e gerenciar o uso de energia em diferentes bairros e horários.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Como funcionário autorizado, você tem acesso total às ferramentas de CRUD (Criar, Ler, Atualizar e Deletar) para manter nossos registros de consumo precisos e atualizados. Este portal é o seu centro de comando para garantir a eficiência energética e a correta alocação de recursos.
+                    </p>
+                    <a href="visualizar.html" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors mt-4">
+                        Acessar Painel de Dados
+                    </a>
+                </div>
+                
+                <div>
+                    <img src="" 
+                         alt="Ilustração de um gráfico de gerenciamento de energia" 
+                         class="rounded-lg shadow-md w-full h-auto object-cover"
+                         onerror="this.src='">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-semibold text-gray-700 mb-8 text-center">
+                Funcionalidades Principais
+            </h2>
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-3">Cadastro Eficiente</h3>
+                    <p class="text-gray-600">
+                        Adicione novos registros de consumo, bairros e número de residências de forma rápida e intuitiva.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-3">Visualização Clara</h3>
+                    <p class="text-gray-600">
+                        Acesse relatórios detalhados e filtre os dados de consumo por hora, bairro ou qualquer outro parâmetro.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-3">Gerenciamento Completo</h3>
+                    <p class="text-gray-600">
+                        Edite ou remova registros obsoletos com facilidade, mantendo a integridade da base de dados.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 GestãoEnergia S.A. Todos os direitos reservados.</p>
+            <p class="text-sm text-gray-400 mt-1">
+                Rua Clarimundo de Melo, N°1 - Quintino, Rio de Janeiro - RJ
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
