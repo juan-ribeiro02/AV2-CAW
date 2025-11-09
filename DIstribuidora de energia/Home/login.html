@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gestão de Consumo de Energia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="indexhome.html" class="text-2xl font-bold text-blue-600">
+                        GestãoEnergia
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="indexhome.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="login.html" class="text-blue-600 font-semibold px-3 py-2 rounded-md text-sm hover:bg-gray-100 transition-colors">Login</a>
+                    <a href="cadastro.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Cadastro de Residência</a>
+                    <a href="visualizar.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Visualizar Dados</a>
+                    <a href="gerenciar.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Editar / Apagar Cadastros</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 p-2 rounded-md">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12 flex items-center justify-center">
+        
+        <div class="bg-white p-8 sm:p-10 rounded-lg shadow-xl w-full max-w-md">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">
+                Acesso do Funcionário
+            </h2>
+            <p class="text-center text-gray-500 mb-8">
+                Faça login para gerenciar o sistema.
+            </p>
+
+            <form action="#" method="POST">
+                <div class="space-y-6">
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">
+                            Email ou ID de Funcionário
+                        </label>
+                        <input type="email" id="email" name="email" 
+                               autocomplete="email"
+                               required
+                               placeholder="seu.email@gestaoenergia.com"
+                               class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400
+                                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-baseline">
+                            <label for="password" class="block text-sm font-semibold text-gray-700 mb-1">
+                                Senha
+                            </label>
+                            <a href="#" class="text-sm text-blue-600 hover:underline">
+                                Esqueceu a senha?
+                            </a>
+                        </div>
+                        <input type="password" id="password" name="password" 
+                               autocomplete="current-password"
+                               required
+                               placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
+                               class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400
+                                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <button type="submit"
+                                class="w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md 
+                                       hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
+                                       transition-colors duration-300">
+                            Entrar
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 GestãoEnergia S.A. Todos os direitos reservados.</p>
+            <p class="text-sm text-gray-400 mt-1">
+                   Rua Clarimundo de Melo, N°1 - Quintino, Rio de Janeiro - RJ
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
